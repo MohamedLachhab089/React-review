@@ -1,16 +1,18 @@
+import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
 
 function App() {
+  const [showAlert, setShowAlert] = useState(false);
   return (
     <>
-      <Alert>
-        Hello <span>World</span>
-      </Alert>
-      <Button onClick={() => console.log("Clicked")}>
-        Click Me
-      </Button>
+      {showAlert && (
+        <Alert onClose={() => setShowAlert(false)}>
+          Button Clicked 💯
+        </Alert>
+      )}
+      <Button onClick={() => setShowAlert(true)}>Click Me</Button>
     </>
   );
 }
