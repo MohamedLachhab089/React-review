@@ -9,7 +9,7 @@ function App() {
     <>
       {showAlert && (
         <Alert onClose={() => setShowAlert(false)}>
-          Button Clicked 💯
+          Button Clicked 💯..
         </Alert>
       )}
       <Button onClick={() => setShowAlert(true)}>Click Me</Button>
